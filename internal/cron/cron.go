@@ -4,11 +4,11 @@ import (
 	"runtime"
 
 	"github.com/jasonlvhit/gocron"
-	"github.com/Alex950808/proxypool/internal/app"
+	"github.com/wangyingbo/proxypool-1/internal/app"
 )
 
 func Cron() {
-	_ = gocron.Every(15).Minutes().Do(crawlTask)
+	_ = gocron.Every(480).Minutes().Do(crawlTask)
 	<-gocron.Start()
 }
 
